@@ -46,7 +46,7 @@ make_all_cemu_keys.bat
 make_all_cemu_keys.ps1
 
 Example:
-
+'''text
 Wii U WUD Dumps/
 ├── make_all_cemu_keys.bat
 ├── make_all_cemu_keys.ps1
@@ -60,7 +60,7 @@ Wii U WUD Dumps/
     └── WUP-P-ARDP/
         ├── game.key
         └── Super Mario 3D World (Europe) (En,Fr,De,Es,It,Nl,Pt,Ru) (Rev 1).wud
-
+'''
 The script does not rely on folder names.
 
 It looks for game.key, then checks whether there is exactly one .wud file in the same folder.
