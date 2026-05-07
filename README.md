@@ -63,31 +63,29 @@ Wii U WUD Dumps/
         └── Super Mario 3D World (Europe) (En,Fr,De,Es,It,Nl,Pt,Ru) (Rev 1).wud
 ```
 
-The script does not rely on folder names.
-
-It looks for game.key, then checks whether there is exactly one .wud file in the same folder.
+The script looks for game.key, then checks whether there is exactly one .wud file in the same folder.
 
 The .wud filename is used as the comment after #.
 
-Output example
+## Output example
 
 If a folder contains:
-
+```text
 game.key
 Mario Kart 8 (Europe) (En,Fr,De,Es,It,Nl,Pt,Ru).wud
-
+```
 The generated keys.txt line will look like:
-
+```text
 0123456789abcdef0123456789abcdef # Mario Kart 8 (Europe) (En,Fr,De,Es,It,Nl,Pt,Ru)
-
+```
 The first part is the 32-character key generated from game.key.
 
 The part after # comes from the .wud filename.
 
-Generated files
+## Generated files
 
 After running the script, your folder may look like this:
-
+```text
 Wii U WUD Dumps/
 ├── keys.txt
 ├── cemu_key_generator_log.txt
@@ -105,38 +103,42 @@ Wii U WUD Dumps/
         ├── game.key
         ├── Super Mario 3D World (Europe) (En,Fr,De,Es,It,Nl,Pt,Ru) (Rev 1).wud
         └── keys.txt
-
+```
 The root keys.txt is the master file containing all generated key lines.
 
-How to use
+## How to use
 Put make_all_cemu_keys.bat and make_all_cemu_keys.ps1 in the root folder above your WUD dump folders.
 
 Make sure each game dump folder contains:
-
+```text
 game.key
 one .wud file
-
-Double-click:
-
+```
+1) Double-click:
+```text
 make_all_cemu_keys.bat
+```
 The script will scan all subfolders.
-Copy the root keys.txt into your Cemu folder, or copy its contents into your existing Cemu keys.txt.
-Important notes
-This is for WUD/WUX-style Cemu key entries.
-game.key must be exactly 16 bytes.
-Each folder must contain exactly one .wud file beside game.key.
-If no .wud file is found beside game.key, that folder is skipped.
-If more than one .wud file is found in the same folder, that folder is skipped.
-Folder names are ignored.
-The .wud filename is used for the comment after #.
-The root keys.txt is overwritten each time the script runs.
-Per-game keys.txt files are also overwritten.
-The script does not modify, delete, rename, or edit any .wud files.
+
+2) Copy the root keys.txt into your Cemu folder, or copy its contents into your existing Cemu keys.txt.
+
+## Important notes
+* This is for WUD/WUX-style Cemu key entries.
+* game.key must be exactly 16 bytes.
+* Each folder must contain exactly one .wud file beside game.key.
+* If no .wud file is found beside game.key, that folder is skipped.
+* If more than one .wud file is found in the same folder, that folder is skipped.
+* Folder names are ignored.
+* The .wud filename is used for the comment after #.
+* The root keys.txt is overwritten each time the script runs.
+* Per-game keys.txt files are also overwritten.
+* The script does not modify, delete, rename, or edit any .wud files.
 
 A log file is written to:
 
 cemu_key_generator_log.txt
-Legal note
+
+## Legal note
 
 This tool is intended only for use with Wii U discs and keys that you have dumped from your own console and games.
 
