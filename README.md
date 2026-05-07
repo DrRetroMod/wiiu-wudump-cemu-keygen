@@ -23,7 +23,6 @@ Tested/intended for Windows 10/11.
 
 The script recursively scans a root folder for Wii U WUD dump folders containing:
 
-```text
 game.key
 *.wud
 
@@ -52,15 +51,15 @@ Wii U WUD Dumps/
 ├── make_all_cemu_keys.bat
 ├── make_all_cemu_keys.ps1
 │
-├── Mario Kart 8 - WUP-P-AMKP/
-│   └── Mario Kart 8 - WUP-P-AMKP/
+├── Mario Kart 8/
+│   └── WUP-P-AMKP/
 │       ├── game.key
-│       └── Mario Kart 8 - WUP-P-AMKP.wud
+│       └── Mario Kart 8 (Europe) (En,Fr,De,Es,It,Nl,Pt,Ru).wud
 │
-└── Super Mario 3D World - WUP-P-ARDP/
-    └── Super Mario 3D World - WUP-P-ARDP/
+└── Super Mario 3D World/
+    └── WUP-P-ARDP/
         ├── game.key
-        └── Super Mario 3D World - WUP-P-ARDP.wud
+        └── Super Mario 3D World (Europe) (En,Fr,De,Es,It,Nl,Pt,Ru) (Rev 1).wud
 
 The script does not rely on folder names.
 
@@ -73,11 +72,11 @@ Output example
 If a folder contains:
 
 game.key
-Mario Kart 8 - WUP-P-AMKP.wud
+Mario Kart 8 (Europe) (En,Fr,De,Es,It,Nl,Pt,Ru).wud
 
 The generated keys.txt line will look like:
 
-0123456789abcdef0123456789abcdef # Mario Kart 8 - WUP-P-AMKP
+0123456789abcdef0123456789abcdef # Mario Kart 8 (Europe) (En,Fr,De,Es,It,Nl,Pt,Ru)
 
 The first part is the 32-character key generated from game.key.
 
@@ -93,16 +92,16 @@ Wii U WUD Dumps/
 ├── make_all_cemu_keys.bat
 ├── make_all_cemu_keys.ps1
 │
-├── Mario Kart 8 - WUP-P-AMKP/
-│   └── Mario Kart 8 - WUP-P-AMKP/
+├── Mario Kart 8/
+│   └── WUP-P-AMKP/
 │       ├── game.key
-│       ├── Mario Kart 8 - WUP-P-AMKP.wud
+│       ├── Mario Kart 8 (Europe) (En,Fr,De,Es,It,Nl,Pt,Ru).wud
 │       └── keys.txt
 │
-└── Super Mario 3D World - WUP-P-ARDP/
-    └── Super Mario 3D World - WUP-P-ARDP/
+└── Super Mario 3D World/
+    └── WUP-P-ARDP/
         ├── game.key
-        ├── Super Mario 3D World - WUP-P-ARDP.wud
+        ├── Super Mario 3D World (Europe) (En,Fr,De,Es,It,Nl,Pt,Ru) (Rev 1).wud
         └── keys.txt
 
 The root keys.txt is the master file containing all generated key lines.
